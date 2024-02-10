@@ -1,19 +1,15 @@
 <template>
   <div>
-    <TestComponent />
+      <b-button @click="showModal">Click Me</b-button>
+      <b-modal id="test">Modal Body</b-modal>
   </div>
 </template>
 
-<script>
-import TestComponent from './components/TestComponent.vue';
+<script setup>
+import { useModal } from 'bootstrap-vue-next'
+const modal = useModal('test')
 
-export default {
-  components: {
-    TestComponent
-  }
+function showModal() {
+  modal.show()
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

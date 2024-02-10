@@ -1,75 +1,20 @@
-# Nuxt 3 Minimal Starter
+- `npm install`
+- `npm run dev`
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+- Check developer console for the following error
+- Notice modal doesnt open
+```
+entry.js:55 [Vue warn]: injection "Symbol(modalManagerPlugin)" not found. 
+  at <BModal id="test" > 
+  at <TestComponent> 
+  at <App key=3 > 
+  at <NuxtRoot>
 ```
 
-## Development Server
+- If you stop the Nuxt process and restart it, the error goes away and the modal opens
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Additional Debugging:
+- `rm -rf node_modules`
+- `npm install`
+- `npm run dev`
+- Repeat previous debugging in developer console, notice error is back
